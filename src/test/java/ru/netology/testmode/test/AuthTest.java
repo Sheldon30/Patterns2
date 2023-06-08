@@ -54,7 +54,7 @@ class AuthTest {
         $("[data-test-id='login'] input").setValue(blockedUser.getLogin());
         $("[data-test-id='password'] input").setValue(blockedUser.getPassword());
         $$("[class='button__text']").find(Condition.exactText("Продолжить")).click();
-        $("div.notification__content").shouldHave(Condition.text("Неверно указан логин или пароль")).shouldBe(Condition.visible);
+        $("div.notification__content").shouldHave(Condition.text("Пользователь заблокирован")).shouldBe(Condition.visible);
 
         // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет,
         //  заблокированного пользователя, для заполнения полей формы используйте пользователя blockedUser
